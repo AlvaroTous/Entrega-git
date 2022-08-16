@@ -35,6 +35,13 @@ body h3{
     margin-bottom: 1rem;
 }
 
+ header nav{
+    transition: 1s;
+}
+header nav:hover{
+    height: 5px;
+}
+
 .menu__option ul{
     list-style-type: none;
 }
