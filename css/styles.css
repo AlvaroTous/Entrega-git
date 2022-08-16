@@ -1,0 +1,250 @@
+/* Pagina index, home */
+/* aplicamos reset */
+
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body{
+    background-color: rgb(192, 188, 188);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* estilo del header */
+body h3{
+    background-color:black;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase ;
+}
+
+
+
+/* estilo del menu */
+
+.menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(83, 82, 82);
+    margin-bottom: 1rem;
+}
+
+.menu__option ul{
+    list-style-type: none;
+}
+
+.menu__option ul li{
+    display: inline-block;
+    margin: 1rem 2rem;
+    padding: 5px;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    background-color: rgb(83, 82, 82);
+}
+
+header nav ul li .menu__button{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+section .banner{
+    margin-top: 1rem;
+    width: 100%;
+    height: 490px;
+    background-color:red;
+}
+section  .banner__img{
+    width: 100%;
+    border: 2px solid black;
+}
+
+
+
+
+/* main */
+
+
+
+main .container{
+    display: grid;
+    grid-template-columns: 3fr auto;
+    grid-template-rows: 1fr auto ;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+    margin-top: 0.5rem;
+    grid-template-areas: "banner banner"
+                         "container__text container__img"
+                         "merchandise merchandise__text";
+    
+}
+.banner{
+    grid-area: banner;
+}
+.container__text{
+    grid-area: container__text;
+}
+.container__img{
+    grid-area: container__img;
+}
+.merchandise{
+    grid-area: merchandise;
+}
+.merchandise__text{
+    grid-area: merchandise__text;
+}
+
+
+
+.container__text{
+    text-align: center;
+}
+
+main .container__text h1{
+    margin-bottom: 1rem;
+    border: 2px solid black;
+    text-transform: uppercase;
+    background-color: rgb(245, 233, 235);
+    display: inline-block;
+}
+
+main .container__text p{
+    font-size: 21px;
+    margin: 1.5rem 1rem;
+}
+
+main .container__img{
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+}
+main .container__img img{
+    width: 100%;
+    height: 100%;
+
+}
+
+main .merchandise{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    text-align: center;
+}
+.merchandise .merchandise__img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+main .merchandise__img img{
+    width: 33,3%;
+    border: 2px solid black;
+}
+main div button{
+  background-color: rgb(192, 188, 188);
+}
+
+
+main .merchandise__text h2{
+    display: inline-block;
+    border: 2px solid black;
+    text-transform: uppercase;
+    background-color: rgb(245, 233, 235);
+}
+main .merchandise__text p{
+    font-size: 21px;
+    margin: 1.5rem 1rem;
+}
+
+
+/* footer */
+footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color:rgb(246, 239, 240) ;
+    margin-top: 2rem;
+    background-color: rgb(83, 82, 82);
+    align-items: flex-end;
+}
+
+footer div ul{
+    list-style-type: none;
+    display: flex;
+    margin-right: 20px;
+    
+}
+footer div ul li{
+    padding: 0.5rem;
+}
+.social-media__item{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*media queries mobile*/
+@media screen and (min-width: 400px) {
+    .menu{
+        display: grid;
+    }
+    .menu__option ul li{
+        display: inline-flex;
+        margin: 3px;
+        padding: 5px;
+    }
+     .container{
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 100px;
+        justify-content: center;
+    }
+    main .merchandise{
+        display: flex;
+        flex-direction: column;
+    }
+    .merchandise__img{
+        display: none;
+    }
+    div .merchandise__text{
+        display: flex;
+        flex-direction: column;
+       justify-content: left;
+    }
+    .container__img{
+        display: none;
+    }
+
+     
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
